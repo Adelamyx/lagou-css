@@ -1,0 +1,61 @@
+#bottom {
+    width: 100%;
+    text-align: center;
+}
+
+#bottom hr {
+    color: #ECECEC;
+}
+
+#bottom li {
+    position: relative;
+    display: inline-block;
+    font-size: 0.8em;
+    line-height: 2em;
+    padding: 0px 20px;
+    color: #555555;
+    cursor: pointer;
+}
+
+#bottom .weixin {
+    position: absolute;
+    top: -245px;
+    left: 0px;
+    display: none;
+}
+
+/*#bottom li:first-of-type:hover .weixin{*/
+/*display: block;*/
+/*}*/
+/*#bottom li:last-of-type:hover .weixin{*/
+/*display: block;*/
+/*}*/
+#bottom li:hover .weixin {
+    display: block;
+}
+
+#bottom .webInfo {
+    color: #555555;
+}
+
+/*回到顶部*/
+
+#returnBack {
+    background: rgba(0, 0, 0, 0) url(../img/backtop.png) no-repeat scroll left top;
+    position: fixed;
+    right: 20%;
+    bottom: 80px;
+    width: 28px;
+    height: 64px;
+    cursor: pointer;
+    display: none;
+}
+
+#returnBack:hover {
+    background-position: right top;
+}
+
+.fix {
+    position: fixed;
+    bottom: 0;
+}
