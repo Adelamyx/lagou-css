@@ -113,7 +113,6 @@
     float: right;
     position: relative;
     width: 73%;
-    z-index: 2;
 }
 
 #content .rightContent #searchType {
@@ -122,11 +121,13 @@
     cursor: pointer;
     display: inline-block;
     float: left;
+    z-index: 5;
 }
 
 #content .rightContent #searchType ul {
     width: 100%;
     height: 37px;
+
 }
 
 #content .rightContent #searchType li {
@@ -203,7 +204,6 @@
     padding: 10px;
     font-size: 0.8em;
     position: relative;
-    z-index: 1;
 }
 
 .searchBar .hotSearch ul {
@@ -223,7 +223,6 @@
 .rightContent .circlePic {
     width: 100%;
     overflow: hidden;
-    font-size: 0;
     height: 160px;
 }
 
@@ -267,20 +266,230 @@
     border: 3px solid #019875;
 }
 
+.rightContent .advert {
+    width: 100%;
+}
 
+.rightContent .advert .advertItem {
+    border: 1px solid rgba(85, 85, 85, 0.2);
+    width: 15%;
+    cursor: pointer;
+    margin-right: 0.7%;
+    margin-top: 2%;
+    display: inline-block;
+    position: relative;
+}
 
+.rightContent .advert .advertItem .shouImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
+.rightContent .advert .advertItem img {
+    width: 100%;
+    height: 100%;
+}
 
+.rightContent .advert .advertItem .hot_info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: none;
+    background: rgba(1, 152, 117, 0.8);
+    opacity: 0;
+}
 
+.rightContent .advert .advertItem .hot_info h2 {
+    padding: 5px;
+    font-size: 1.2em;
+}
 
+.rightContent .advert .advertItem .hot_info hr {
+    width: 80%;
+    color: rgb(255, 255, 255);
+}
 
+.rightContent .advert .advertItem .hot_info p {
+    text-align: left;
+    padding: 5px;
+    font-size: 0.7em;
+    line-height: 1.5em;
+}
 
+.rightContent .advert .advertItem:hover img {
+    animation: advert 0.5s;
+    animation-fill-mode: forwards;
+}
 
+.rightContent .advert .advertItem:hover .hot_info {
+    animation: advertHot 0.5s;
+    animation-fill-mode: forwards;
+    display: block;
+}
 
+@keyframes advert {
+    to {
+        transform: scale(1.5);
+    }
+}
 
+@keyframes advertHot {
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
 
+.rightContent .jobNav {
+    width: 100%;
+    background: rgb(246, 246, 246);
+    margin-top: 20px;
+}
 
+.rightContent .jobNav ul li {
+    font-size: 1.25em;
+    padding: 7px 20px;
+    cursor: pointer;
+    display: inline-block;
+}
 
+.rightContent .jobNav ul .choose {
+    border-top: 3px solid #77D3BE;
+    background-color: rgb(255, 255, 255);
+}
+
+.rightContent .hotJob,
+.rightContent .newJob {
+    width: 100%;
+    position: relative;
+}
+
+.rightContent .newJob {
+    display: none;
+}
+
+.rightContent .hotJob li:nth-child(even),
+.rightContent .newJob li:nth-child(even) {
+    background-color: rgb(250, 250, 250);
+}
+
+.rightContent .hotJob li,
+.rightContent .newJob li {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.rightContent .hotJob li .jobInfo,
+.rightContent .newJob li .jobInfo {
+    width: 50%;
+    float: left;
+}
+
+.rightContent .hotJob li h2,
+.rightContent .newJob li h2 {
+    padding: 0 0 20px 0;
+}
+
+.rightContent .hotJob li h2 a,
+.rightContent .newJob li h2 a {
+    color: black;
+    margin-right: 20px;
+}
+
+.rightContent .hotJob li .companyInfo h2 a,
+.rightContent .newJob li .companyInfo h2 a {
+    text-decoration: none;
+}
+
+.rightContent .hotJob li .light,
+.rightContent .newJob li .light {
+    color: rgb(119, 119, 119);
+}
+
+.rightContent .hotJob li p,
+.rightContent .newJob li p {
+    margin: 10px 0;
+    font-size: 0.8em;
+}
+
+.rightContent .hotJob li .companyInfo,
+.rightContent .newJob li .companyInfo {
+    width: 50%;
+    float: left;
+}
+
+.rightContent .hotJob li .feature,
+.rightContent .newJob li .feature {
+    border: 1px solid rgb(119, 119, 119);
+    margin-right: 10px;
+}
+
+.rightContent .hotJob li .small,
+.rightContent .newJob li .small {
+    margin-left: 20px;
+}
+
+#viewMore {
+    float: right;
+    background-color: #019875;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+#viewMore span {
+    width: 16px;
+    height: 16px;
+    float: right;
+    margin-left: 5px;
+}
+
+#viewMore span img {
+    width: 100%;
+    height: 100%;
+}
+
+.friendLink {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.friendLink dt {
+    width: 10%;
+    float: left;
+}
+
+.friendLink dd {
+    width: 90%;
+    float: right;
+}
+
+.friendLink li {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 0 7px;
+    border-right: 1px solid rgb(85, 85, 85);
+}
+
+.friendLink hr {
+    color: rgba(236, 236, 236, 0.3);
+}
+
+.friendLink li a {
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+    font-size: 0.75em;
+}
+
+.friendLink li a:hover {
+    color: #0061A6;
+    text-decoration: underline;
+}
 
 
 
